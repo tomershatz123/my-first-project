@@ -1,0 +1,14 @@
+<div>
+  <h6><b>3</b> Select Time Period</h6>
+  <div class="card card-body colored-bkg">
+    <ul class="list-group list-group-flush">
+      <li *ngFor="let time of timeConfig.timeOptions">
+        <label  class="form-check-label text-blue">
+          <input type="radio" name="times" (click)="timeConfig.selectedId=time.id" 
+            [checked]="time.id===timeConfig.selectedId">
+          {{time.name}}
+        </label>
+      </li>
+    </ul>
+  </div>
+</div>

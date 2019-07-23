@@ -1,0 +1,27 @@
+.header-bkg {
+    background-color: #184369;
+    min-height: 40px;
+    vertical-align: middle;
+}
+
+.text-blue {
+    color: #1122dd;
+    font-size: 14px;
+}
+
+.caret.caret-reversed {
+    border-top-width: 0;
+    border-bottom: 4px solid #000000;
+}
+
+.header-label {
+    color: #ffffff;
+}
+
+.header-button {
+    background-color:transparent;
+}
+
+.icon-clr {
+    color: #ffffff;
+}

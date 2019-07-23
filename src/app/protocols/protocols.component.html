@@ -1,0 +1,11 @@
+<div>
+  <h6><b>2</b> Select Protocols</h6>
+  <div class="card card-body colored-bkg">
+    <ul class="list-group list-group-flush ml-4">
+      <li  *ngFor="let protocol of protocols">
+          <input type="checkbox" class="form-check-input" [checked]="protocol.selected" (change)="protocol.selected=!protocol.selected">
+          <label class="form-check-label text-blue" >{{ protocol.name }}</label>
+      </li>
+    </ul>
+  </div>
+</div>

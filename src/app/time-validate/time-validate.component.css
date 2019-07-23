@@ -1,0 +1,7 @@
+.clr-err {
+    color: red;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #184369;
+}

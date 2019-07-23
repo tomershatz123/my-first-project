@@ -1,0 +1,44 @@
+<div>
+  <h6> Summary</h6>
+  <div class="card card-body">
+    <div>
+      <div *ngIf="areAnyDevices(); else noDevices" >
+        <p><span class="section-number" >1</span>
+        <ul class="ml-0 pl-1">
+          <li *ngFor="let devGrp of deviceGroups" class="ml-0">
+            <ul class="ml-0 pl-0">
+              <li *ngFor="let dev of (devGrp.devices | devicespipe)" class="text-blue ml-0 pl-0">
+                {{ dev.name }}
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <ng-template #noDevices>
+        <p><span class="section-number-disableld" >1  <i>Select devices</i></span>
+      </ng-template>
+    </div>
+    <hr />
+    <div >
+      <div *ngIf="areAnyProtocols(); else noProtocols" >
+        <p><span class="section-number" >2</span>
+          <span class="text-blue ml-2">{{ protocols | protocolspipe }}</span>
+        </p>
+      </div>
+      <ng-template #noProtocols>
+          <p><span class="section-number-disableld" >2  <i>Select protocols</i></span>
+        </ng-template>
+    </div>
+    <hr />
+    <div >
+      <p><span class="section-number">3</span>
+        <span class="text-blue ml-2">{{ timeConfig | timespipe }}</span>
+      </p>
+    </div>
+    <hr />
+    <div class="btn-group" role="group">
+      <button type="button" class="btn btn-link" (click)="onClear()">Clear</button>
+      <button type="button" class="btn btn-primary" (click)="onStartLearning()" [disabled]="!canStart()"><span class="fa fa-caret-right fa-lg mr-2"></span>Start Learning</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="mt-4">
+  <h6><b>5</b> Validate time</h6>
+  <div class="card card-body">
+    <form role="search" [formGroup]="testForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <input type="text" class="form-control" id='test1' formControlName="time" placeholder="YYYY-M-DTHH:mm:ss.SSSZ" autocomplete="off" spellcheck="false">
+          <small class="help-block clr-err" *ngIf="!testForm.get('time').valid && testForm.get('time').errors['invalidFormat'] && testForm.get('time').touched">Time format is invalid</small>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary" >Test </button>
+        </div>
+    </form>
+  </div>
+</div>

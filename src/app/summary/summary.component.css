@@ -1,0 +1,22 @@
+.text-blue {
+    color: #1122dd;
+    font-size: 14px;
+}
+
+.section-number {
+    font-weight: 700;
+    color: #777777;
+}
+
+.section-number-disableld {
+    font-weight: 700;
+    color: #dddddd;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #184369;
+}

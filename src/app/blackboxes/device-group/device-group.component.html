@@ -1,0 +1,18 @@
+<div class="card">
+    <div class="card-header header-bkg form-inline p-0">
+      <button type="button" class="btn header-button btn-sm" (click)="expanded=!expanded"><span class="fa fa-lg icon-clr mr-2" [ngClass]="{'fa-caret-up':expanded, 'fa-caret-down': !expanded}"></span></button>
+      <label class="header-label" >
+        <input type="checkbox" class="form-check-input" [checked]="areAllActive()" (change)="checkAll()" >
+          {{ deviceGroup.name }}
+      </label>
+    </div>
+    <div class="card-body" *ngIf="expanded">
+      <ul class="list-group list-group-flush ml-2">
+        <li *ngFor="let device of deviceGroup.devices; let i = index;">
+            <input type="checkbox" class="form-check-input" [checked]="device.active" (change)="device.active=1-device.active;">
+            <label class="form-check-label text-blue" >{{ device.name }}</label>
+        </li>
+      </ul>
+    <div>
+  </div> 
+</div>
